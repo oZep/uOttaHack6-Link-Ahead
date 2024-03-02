@@ -1,4 +1,4 @@
 import json
 from flask import Flask, jsonify, request
-from analyze 
+import anaylze
 app = Flask(__name__)
