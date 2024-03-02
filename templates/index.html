@@ -1,140 +1,140 @@
-<style>
-    body {
-        background: white;
-        align-items: center;
-    }
-
-    .container {
-        font-family: Arial, Helvetica, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
-        padding: 20px;
-        border-radius: 30px;
-        border: 1px solid grey;
-        box-shadow: 4px 3px rgb(76, 76, 76, 0.8);
-    }
-    footer {
-        font-family: Arial, Helvetica, sans-serif;
-        flex-direction: column;
-        position: flex;
-        display: flex;
-        align-items: center;
-        bottom: 0;
-        font-size: large;
-        color: rgb(0, 0, 0);
-    }
-
-    .title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    .description {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .submit {
-        padding: .3rem .6rem;
-        font-size: 1rem;
-        background-color: #000000;
-        color: white;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .submit:hover {
-        background-color: #4CAF50;
-    }
-
-    input[type="url"] {
-        padding: .3rem .6rem;
-        font-size: 1rem;
-        border: 1px solid grey;
-        border-radius: 10px;
-    }
-
-    label {
-        font-size: 1.2rem;
-    }
-
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5rem 0 3rem;
-    }
-
-    .midlane {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        padding-left: 3em;
-        padding-right: 3em;
-    }
-
-    p a  {
-        color: #4CAF50 !important;
-    }
-
-    p a:hover {
-        color: #2eff23 !important;
-    }
-
-
-
-    </style>
-<script>
-    document.getElementById('urlForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        var url = document.getElementById('urlInput').value;
-
-        fetch('/api', {
-            method: 'POST',
-            body: JSON.stringify({ url: url }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            var value = parseFloat(data);
-            if (!isNaN(value)) {
-                if (value > 0.5) {
-                    var red = 255 * value
-                    document.body.style.backgroundColor = 'rgb(${red}, 0, 0)';
-                } else {
-                    var green = 255 * (1 - value)
-                    document.body.style.backgroundColor = 'rgb(0, ${green}, 0)';
-                }
-            } else {
-                console.error('Invalid response from server');
-                document.body.classList.add('error');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            document.body.classList.add('error');
-        });
-    });
-</script>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Link Ahead</title>
+    <style>
+        body {
+            background: white;
+            align-items: center;
+        }
+    
+        .container {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 30px;
+            border: 1px solid grey;
+            box-shadow: 4px 3px rgb(76, 76, 76, 0.8);
+        }
+        footer {
+            font-family: Arial, Helvetica, sans-serif;
+            flex-direction: column;
+            position: flex;
+            display: flex;
+            align-items: center;
+            bottom: 0;
+            font-size: large;
+            color: rgb(0, 0, 0);
+        }
+    
+        .title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    
+        .description {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    
+        .submit {
+            padding: .3rem .6rem;
+            font-size: 1rem;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    
+        .submit:hover {
+            background-color: #4CAF50;
+        }
+    
+        input[type="url"] {
+            padding: .3rem .6rem;
+            font-size: 1rem;
+            border: 1px solid grey;
+            border-radius: 10px;
+        }
+    
+        label {
+            font-size: 1.2rem;
+        }
+    
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5rem 0 3rem;
+        }
+    
+        .midlane {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+    
+        p a  {
+            color: #003b02 !important;
+        }
+    
+        p a:hover {
+            color: #044a00 !important;
+        }
+
+    
+    </style>
 </head>
 <body>
+    <script>
+        var params = new URL(document.location).searchParams;
+        var  value = parseFloat(params.get("value")); 
+        if (!isNaN(value)) {
+                    if (value > 0.5) {
+                        var red = 255 * value
+                        document.body.style.background = `rgb(${red}, 0, 0)`;
+                    } else {
+                        var green = 255 * (1 - value)
+                        document.body.style.background = `rgb(0, ${green}, 0)`;
+                    }
+                } else {
+                    console.error('Invalid response from server');
+                    document.body.classList.add('error');
+                }
+        /*document.getElementById('urlForm').addEventListener('submit', function(event) {
+            if (!isNaN(value)) {
+                    if (value > 0.5) {
+                        var red = 255 * value
+                        document.body.style.backgroundColor = 'rgb(${red}, 0, 0)';
+                    } else {
+                        var green = 255 * (1 - value)
+                        document.body.style.backgroundColor = 'rgb(0, ${green}, 0)';
+                    }
+                } else {
+                    console.error('Invalid response from server');
+                    document.body.classList.add('error');
+                }
+            event.preventDefault(); // Prevent default form submission
+            console.log(value);
+    
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.body.classList.add('error');
+            }); */
+    </script>
 <div class="midlane">
    <div class="container">
        <h2 class="title">🔰 Welcome to <u>Link Ahead</u> 🔰</h2>
@@ -142,7 +142,7 @@
         <form action="/api" method="POST" id="urlForm">
               <label for="url">Enter a URL: </label>
               <input type="text" name="url" placeholder="Enter a URL" required>
-              <button type="submit" class="submit">Check</button>
+              <button type="submit" name="submit" class="submit">Check</button>
         </form>
     </div>
     <footer>
