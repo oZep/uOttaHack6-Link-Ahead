@@ -92,6 +92,41 @@
 
 
     </style>
+<script>
+    document.getElementById('urlForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var url = document.getElementById('urlInput').value;
+
+        fetch('/api', {
+            method: 'POST',
+            body: JSON.stringify({ url: url }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            var value = parseFloat(data);
+            if (!isNaN(value)) {
+                if (value > 0.5) {
+                    var red = 255 * value
+                    document.body.style.backgroundColor = 'rgb(${red}, 0, 0)';
+                } else {
+                    var green = 255 * (1 - value)
+                    document.body.style.backgroundColor = 'rgb(0, ${green}, 0)';
+                }
+            } else {
+                console.error('Invalid response from server');
+                document.body.classList.add('error');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.body.classList.add('error');
+        });
+    });
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -104,7 +139,7 @@
    <div class="container">
        <h2 class="title">🔰 Welcome to <u>Link Ahead</u> 🔰</h2>
        <p class="description">This is a simple web application that allows you to check the safety of links</p>
-        <form action="/api" method="post">
+        <form action="/api" method="POST" id="urlForm">
               <label for="url">Enter a URL: </label>
               <input type="text" name="url" placeholder="Enter a URL" required>
               <button type="submit" class="submit">Check</button>
