@@ -12,7 +12,7 @@ I found an interesting dataset on Kaggle when I was starting to lose hope on mak
 **Link Ahead** is a **machine learning** model and tool that can be used to discriminate between phishing links and non-phishing links with a *92.59% accuracy*. Using this model, I constructed a **Web Application** to allow others to input any link of choice and test the trustworthiness of it. The background ranges from shades of red -- green to demonstrate the severity visibly. I also created a **Google Chrome Extension** that can be used to scan and test the safety of all the links available on any webpage.
 
 ## How we built it
-To build this tool, I used ......______________________- To build the web app, I used Flask, HTML/CSS/JS. To build the API, I used Flask and data processed via python from the Kaggle source. To build the Google Chrome Extension, I used HTML/CS/JS, while calling to my API repeatedly.
+To build this tool, I used TenserFlow....... To build the web app, I used Flask, HTML/CSS/JS. To build the API, I used Flask and data processed via python from the Kaggle source. To build the Google Chrome Extension, I used HTML/CS/JS, while calling to my API repeatedly.
 
 ## Challenges we ran into
 - Getting a Flask application to be hosted on Vercel [UnSolved - Went with 3 other options then decided to set up out own server]
