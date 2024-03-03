@@ -6,13 +6,13 @@ This project is for CSE Machine Learning Challenge:
 > **Challenge**: Build a project that uses Machine Learning; Our criteria include application performance, focusing on speed, accuracy, model size, and resource allocation.
 
 ## Inspiration
-I found a intresting dataset on Kaggle when I was starting to loose hope on making something for this Hackaton. I stumbles upon one from ___authon___ After thinking about the use cases of decriminating between phishing links and regurlar links, I thought it would be an intresting challenge to tackles with my time. Even with the constant advertisments and warnings the Government of Canada exposing these scams, we hear about the elderly, young kids, and unknowning adults falling prey to phishing schemes on the news daily. Taking a real life challenge and applying Machine Learning to help others seemed like a rewarding task-- One I couldn't pass up.
+I found a intresting dataset on Kaggle when I was starting to loose hope on making something for this Hackaton. I stumbled upon one about decriminating between phishing links and regurlar links, I thought it would be an intresting challenge to tackles with my time. Even with the constant advertisments and warnings the Government of Canada outputs exposing these scams, we hear about the elderly, young kids, and unknowning adults falling prey to phishing schemes on the news daily. Taking a real life challenge and applying Machine Learning, and taking it to a point where people from any tech background could use it, seemed like a rewarding task-- One I couldn't pass up.
 
 ## What it does
-The SHE (SHockingly Effective Motivational Tool) is a tool much like similar health monitors, but when one's heart rate and movement is below a certain threshold, they are deemed inactive and a small shock is given to the user. The shock stops when the user becomes active. This is to motivate the user to always remain active and keep on moving!
+Link Ahead is a machine learning model and tool that can be used to discrimiate between phishing links and non-phishing links with a 92.59% accuracy. Using this model, I constructed a web application to allow others to input any link of choice and test the trustworthiness of it. The background ranging from shades of red -- green to demonstrate the serverity visibly. 
 
 ## How we built it
-To build this tool, we used an Arduino to code the program, Raspberry Pi for the bread board, Pulse Oximeter Sensor MAX30100/30102 to detect heart rate and Accelerometer GY-521 MPU-6050 and Gyrometer to measure movement.
+To build this tool, I used . To build the web app, I used using Flask, HTML/CSS/JS. To build the api, I used Flask and dataprocessed via python from the Kaggle source, 
 
 ## Challenges we ran into
 Out team has conquered many challenges such as sensor wiring issues,
