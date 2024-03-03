@@ -13,7 +13,7 @@ def getInfo():
     data = {}
     for key in df_new.keys():
         pair = []
-        mean = df_new[key].sum() / len(show)
+        mean = df_new[key].sum() / len(plt.show)
         sd = df_new[key].std()
         pair.append(mean)
         pair.append(sd)
