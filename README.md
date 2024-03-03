@@ -30,9 +30,7 @@ how to call APIs within a Chrome Extension.
 Find somewhere to host indefinitely, and upload the chrome extension for approval to be posted on the Chrome Web Store. 
 
   
-[Github] https://github.com/oZep/
-[Slides] https://docs.google.com/presentation/d/1NGeo-0PvH55BioimHmw_d4aBaAhLABeTnAHcM4Iky1E/edit?usp=sharing
+[Github] https://github.com/oZep/uOttaHack6-Link-Ahead
 
-https://github.com/oZep/HackNerds/assets/97713154/5fade753-270e-4f94-9e06-8a7f6a6d16b7
-
+[Slides] https://docs.google.com/presentation/d/1_gk9gpgYydGDOnoFh71wkYx1LNCpRqqVUksM8woCePU/edit?usp=sharing
 
