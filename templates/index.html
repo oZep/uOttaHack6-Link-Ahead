@@ -55,12 +55,12 @@
         }
     
         .submit:hover {
-            background-color: #4CAF50;
+            background-color: #af4c4c;
         }
     
         input[type="url"] {
-            padding: .3rem .6rem;
-            font-size: 1rem;
+            padding: 3rem 4rem;
+            font-size: 1.2rem;
             border: 1px solid grey;
             border-radius: 10px;
         }
@@ -73,7 +73,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 1.5em;
+            font-size: 1.2em;
             padding: 5rem 0 3rem;
         }
     
@@ -88,11 +88,11 @@
         }
     
         p a  {
-            color: #003b02 !important;
+            color: #45b227 !important;
         }
     
         p a:hover {
-            color: #044a00 !important;
+            color: #0fcd0f !important;
         }
 
     
@@ -114,27 +114,6 @@
                     console.error('Invalid response from server');
                     document.body.classList.add('error');
                 }
-        /*document.getElementById('urlForm').addEventListener('submit', function(event) {
-            if (!isNaN(value)) {
-                    if (value > 0.5) {
-                        var red = 255 * value
-                        document.body.style.backgroundColor = 'rgb(${red}, 0, 0)';
-                    } else {
-                        var green = 255 * (1 - value)
-                        document.body.style.backgroundColor = 'rgb(0, ${green}, 0)';
-                    }
-                } else {
-                    console.error('Invalid response from server');
-                    document.body.classList.add('error');
-                }
-            event.preventDefault(); // Prevent default form submission
-            console.log(value);
-    
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.body.classList.add('error');
-            }); */
     </script>
 <div class="midlane">
    <div class="container">
@@ -148,7 +127,9 @@
     </div>
     <footer>
         <div class="footer-container">
+            <div class="container">
             <p>Download the <a href="https://github.com/oZep/Link-Ahead-Extended">chrome extension</a> to be safe on the go!</p>
+        </div>
         </div>
     </footer>
 </div>
