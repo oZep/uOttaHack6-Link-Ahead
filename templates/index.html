@@ -43,7 +43,7 @@
             margin-bottom: 1rem;
         }
     
-        .submit {
+        .submit, .reset {
             padding: .3rem .6rem;
             font-size: 1rem;
             background-color: #000000;
@@ -52,21 +52,28 @@
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s ease;
+            margin: 0 .3rem;
         }
     
         .submit:hover {
             background-color: #8d8d8d;
         }
     
-        input[type="url"] {
-            padding: 3rem 4rem;
+        input[type="text" i] {
+            padding-block-end: .3rem;
+            padding-block-start: .1rem;
             font-size: 1.2rem;
-            border: 1px solid grey;
+            border: 2px solid grey;
             border-radius: 10px;
+            padding: 7px;
+            width: 70%;
+            margin: 0 .4rem;
         }
     
         label {
             font-size: 1.2rem;
+            margin: 0.4rem .4rem;
+            white-space: nowrap;
         }
     
         .footer-container {
@@ -95,6 +102,11 @@
             color: #0fcd0f !important;
         }
 
+        form {
+            display: flex;
+            flex-direction: row;
+        }
+
     
     </style>
 </head>
@@ -121,8 +133,9 @@
        <p class="description">This is a web application based on a Machine Learning Model that allows you to check the safety of links</p>
         <form action="/api" method="POST" id="urlForm">
               <label for="url">Enter a URL: </label>
-              <input type="text" name="url" placeholder="Enter a URL" required>
+              <input type="text" name="url" placeholder="https://www.google.ca/" required>
               <button type="submit" name="submit" class="submit">Check</button>
+              <button type="reset" name="reset" class="reset">Reset</button>
         </form>
     </div>
     <footer>
