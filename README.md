@@ -1,6 +1,4 @@
 # Link Ahead
-![gallery (2)](https://github.com/oZep/uOttaHack6-Link-Ahead/assets/97713154/68dcb3f4-ef93-4a80-ac20-fa873ce24cf9)
-
 ![gallery (4)](https://github.com/oZep/uOttaHack6-Link-Ahead/assets/97713154/994e8e9b-8e0d-49a2-8b72-09b6865e0dc4)
 
 
