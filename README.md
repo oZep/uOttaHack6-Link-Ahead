@@ -21,7 +21,7 @@ To build this tool, we used a dense sequential model trained on over 1.4 million
 - Editing Chrome's Manifest to allow access to all web pages [Solved]
 
 ## Accomplishments that we're proud of
-Despite it all, I was able to solo develop a product that is usable and a helpful tool for everyone’s day to day life.
+Despite it all, I was able to develop a product that is usable and a helpful tool for everyone’s day to day life. Big thank you to @jar who walked me through every major setback that occured along the way. 
 
 ## What we learned
 how to use Flask to build a webpage and API. 
