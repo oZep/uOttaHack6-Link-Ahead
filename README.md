@@ -1,4 +1,7 @@
 # Link Ahead
+![gallery (2)](https://github.com/oZep/uOttaHack6-Link-Ahead/assets/97713154/68dcb3f4-ef93-4a80-ac20-fa873ce24cf9)
+![gallery (1)](https://github.com/oZep/uOttaHack6-Link-Ahead/assets/97713154/2177cb15-fad4-4dd7-b269-732c9591e862)
+
 
 ## Challenge
 This project is for CSE Machine Learning Challenge:
