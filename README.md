@@ -33,3 +33,4 @@ Find somewhere to host indefinitely, and upload the chrome extension for approva
 
 [Slides] https://docs.google.com/presentation/d/1_gk9gpgYydGDOnoFh71wkYx1LNCpRqqVUksM8woCePU/edit?usp=sharing
 
+[Devpost] https://lnkd.in/eTaZUyCx
